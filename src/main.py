@@ -37,6 +37,10 @@ def sleep(minutes: float) -> None:
     func(minutes_to_ms(minutes))
 
 
+# Signal that mcu is entering main loop
+beam.flash(3)
+
+
 while True:
     try:
         response = requests.get(config.LAMBDA_URL).json()
