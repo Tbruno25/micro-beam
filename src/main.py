@@ -1,18 +1,10 @@
 from time import sleep_ms
-import requests
+
 import machine
-from microwifimanager import manager
+import requests
+
 import beam
 import config
-
-
-wlan = manager.WifiManager().get_connection()
-
-if wlan is None:
-    print("Could not initialize the network connection.")
-    while True:
-        pass
-
 
 if config.LAMBDA_URL is None:
     print("AWS lambda address is not set.")

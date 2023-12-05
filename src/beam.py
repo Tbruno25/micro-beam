@@ -1,7 +1,8 @@
-from machine import Pin, PWM
 from time import sleep, time
-import config
 
+from machine import PWM, Pin
+
+import config
 
 DELAY = 0.003
 RANGE = list(range(256, 1024))
@@ -30,6 +31,7 @@ def pulse(minutes: int) -> None:
     while time() - start < seconds:
         fade_in()
         fade_out()
+    pwm.duty(0)
 
 
 def flash(times: int) -> None:

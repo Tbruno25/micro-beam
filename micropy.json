@@ -8,7 +8,8 @@
         "micropy-cli": "*"
     },
     "packages": {
-        "micro-wifi-manager": "*"
+        "micro-wifi-manager": "*",
+        "micropython-senko": "*"
     },
     "config": {
         "vscode": true,
