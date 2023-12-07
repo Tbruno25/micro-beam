@@ -9,7 +9,7 @@ RANGE = list(range(256, 1024))
 
 
 pin = Pin(config.LED_GPIO)
-frequency = 5_000
+frequency = 1_000
 pwm = PWM(pin, freq=frequency, duty=0)
 
 
