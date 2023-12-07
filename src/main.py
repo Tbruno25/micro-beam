@@ -30,8 +30,7 @@ def sleep(minutes: float) -> None:
 
 
 # Signal that mcu is entering main loop
-beam.flash(3)
-
+beam.flash(times=3)
 
 while True:
     try:

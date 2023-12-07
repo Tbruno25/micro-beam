@@ -34,9 +34,9 @@ def pulse(minutes: int) -> None:
     pwm.duty(0)
 
 
-def flash(times: int) -> None:
+def flash(times: int, delay: float = 0.2) -> None:
     for _ in range(times):
         pwm.duty(RANGE[-1])
-        sleep(0.2)
+        sleep(delay)
         pwm.duty(0)
-        sleep(0.2)
+        sleep(delay)
