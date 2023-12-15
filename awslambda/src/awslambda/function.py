@@ -70,6 +70,6 @@ def lambda_handler(event, context):
                 )
                 response.lightBeam = kings_win
             else:
-                response.sleepMinutes = 2
+                response.sleepMinutes = 1 / 4
 
     return json.dumps(asdict(response))
